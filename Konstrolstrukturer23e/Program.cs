@@ -25,7 +25,7 @@ using static System.Formats.Asn1.AsnWriter;
 
 //int age = 15;
 //string message = "You are ";
-//message +=  ((age < 18) ? "a child." : "an adult.");
+//message += (age < 18) ? "a child." : "an adult.";
 ////if (age < 18)
 ////{
 ////    message = message + "a child.";
@@ -56,7 +56,7 @@ using static System.Formats.Asn1.AsnWriter;
 //    Console.WriteLine("Mark is: D");
 //}
 
-//int childSupport = 0; 
+//int childSupport = 0;
 //int noOfChildren = 2;
 
 //switch (noOfChildren)
@@ -81,41 +81,79 @@ using static System.Formats.Asn1.AsnWriter;
 
 
 //int number = 1;
-//while (number < 5) 
+//while (number < 5)
 //{
-//    Console.WriteLine($"The value of the number is {number}" );
+//    Console.WriteLine($"The value of the number is {number}");
 //    number = number + 2;
 //}
 
 
-void Menu(string choices)
-{
-    int key = 0;
-    while (key != 3)
-    {
-        Console.WriteLine(choices);
-        Console.Write("Angiv dit valg: ");
-        key = int.Parse(Console.ReadLine()) ;
-        Console.Clear();
-        Console.WriteLine($"You pressed {key}");
-        if (key == 1)
-        {
-            Console.WriteLine("Opret kunde");
-        }
-        else if (key == 2)
-        {
-            Console.WriteLine("Bestil pizza");
-        }
-        else if (key == 3)
-            Console.WriteLine("Afslut");
-        else
-            Console.WriteLine("Ikke en valgmulighed");
-        Console.ReadLine();
-    }
+//void Menu(string choices)
+//{
+//    int key = 0;
+//    while (key != 3)
+//    {
+//        Console.WriteLine(choices);
+//        Console.Write("Angiv dit valg: ");
+//        key = int.Parse(Console.ReadLine()) ;
+//        Console.Clear();
+//        Console.WriteLine($"You pressed {key}");
+//        if (key == 1)
+//        {
+//            Console.WriteLine("Opret kunde");
+//        }
+//        else if (key == 2)
+//        {
+//            Console.WriteLine("Bestil pizza");
+//        }
+//        else if (key == 3)
+//            Console.WriteLine("Afslut");
+//        else
+//            Console.WriteLine("Ikke en valgmulighed");
+//        Console.ReadLine();
+//    }
 
+//}
+
+//string choices = "\t1.\tOpret Kunde \n\t2.\tBestil pizza\n\t3.\tAfslut";
+//Menu(choices);
+
+
+//Udskriv alle lige tal fra 20 og til og med 0 i faldende orden
+
+////initialisering
+//int i = 20;
+//while(i>=0) //Condition
+//{
+//    Console.WriteLine(i);
+//    i = i - 2; //ændre condition
+//}
+
+////initialisering
+//int i = 20;
+//while (i >= 0) //Condition
+//{
+//    if (i%2 ==0)
+//    {
+//        Console.WriteLine(i);
+//    }
+//    i = i - 1; //ændre condition    
+//}
+
+
+int i = 1;
+int j = 1;
+while(j<=10)
+{
+    i = 1;
+    while (i <= 10)
+    {
+        Console.Write("*\t");
+        i = i + 1; //i++
+    }
+    Console.WriteLine();
+    j = j + 1;//j++
 }
 
-string choices = "\t1.\tOpret Kunde \n\t2.\tBestil pizza\n\t3.\tAfslut";
-Menu(choices);
 
 
