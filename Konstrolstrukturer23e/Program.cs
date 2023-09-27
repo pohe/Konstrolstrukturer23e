@@ -3,6 +3,7 @@
 
 //int age = 17;
 using System.Reflection.PortableExecutable;
+using System.Xml.Linq;
 using static System.Formats.Asn1.AsnWriter;
 
 //Console.WriteLine("Starting to check age...");
@@ -141,19 +142,111 @@ using static System.Formats.Asn1.AsnWriter;
 //}
 
 
-int i = 1;
-int j = 1;
-while(j<=10)
+//int i = 1;
+//int j = 1;
+//while(j<=10)
+//{
+//    i = 1;
+//    while (i <= 10)
+//    {
+//        Console.Write("*\t");
+//        i = i + 1; //i++
+//    }
+//    Console.WriteLine();
+//    j = j + 1;//j++
+//}
+
+
+//for (int number = 1; number < 5; number++)
+//{
+//    Console.WriteLine(number);
+//}
+
+//for(  ;  ;  )
+//{
+
+//}
+
+//for(int j=0; j<10 ; j++ )
+//{
+//    for (int i = 0; i < 10; i++)
+//    {
+//        Console.Write("*\t");
+//    }
+//    Console.WriteLine();
+//}
+
+
+int[] tab = new int[] {2,10,12,13, 67 };
+
+//tab[0] = 2;
+//tab[1] = 10;
+//tab[2] = 12;
+//tab[3] = 13;
+
+//Console.WriteLine(tab[1]);
+
+tab[3] = tab[0] + 12;
+
+tab[1]++; //tab[1] = tab[1] + 1
+
+for(int i = 0; i < tab.Length; i++)
 {
-    i = 1;
-    while (i <= 10)
-    {
-        Console.Write("*\t");
-        i = i + 1; //i++
-    }
-    Console.WriteLine();
-    j = j + 1;//j++
+    Console.WriteLine(tab[i]);
+}
+
+foreach(int tal in tab)
+{
+    Console.WriteLine(tal);
 }
 
 
+string[] names = new string[] { "Gustav", "Magnus", "Camilla", "Marius", "Katrine", "Stephane", "Jonas", "Jacob", "Molle"};
 
+//foreach(string name in names)
+//{ 
+//    Console.WriteLine(name); 
+//}
+
+
+//for(int i = 0;i<names.Length;i++)
+//{
+//    Console.WriteLine(names[i]);
+//}
+
+//int j = 0;
+//while( j<names.Length)
+//{
+//    Console.WriteLine(names[j]);
+//    j++;
+//}
+
+
+//for (int i = names.Length-1; i >=0; i--)
+//{
+//    Console.WriteLine(names[i]);
+//}
+
+//for (int i = 3; i < 6; i++)
+//{
+//    Console.WriteLine(names[i]);
+//}
+int k = 0;
+foreach (string name in names)
+{
+    if (name =="Marius")
+    {
+        Console.WriteLine($"Fundet {name} på index { k } ");
+        break;
+    }
+    k++;
+}
+
+for(int i=0; i < names.Length; i++)
+{
+    if (names[i] == "Marius")
+    {
+        Console.WriteLine($"Fundet {names[i]} på index {i}");
+        break;
+    }
+}
